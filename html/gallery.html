@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Witcher 3, WebPage about game "The Witcher 3 - Wild Hunt"</title>
+    <meta
+    name="description"
+    content="Strona fanowska o grze The Witcher 3 - Wild Hunt. Fan page about my favourite game The Witcher 3 - Wild hunt"
+    />
+    <meta
+    name="keywords"
+    content="The Witcher 3, Wild Hunt, fan page, wiedżmak, 3 wild hunt, witcher"
+    />
+    <link rel="stylesheet" href="../style/style.css" />
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <link rel="icon" type="image/x-icon" href="../images/logo/medalion.png">
+  </head>
+  
+  <body class="bodyGalleryMobile">
+    <video autoplay muted loop id="background">
+      <source
+      src="../media/background/header/backgroundFire.mp4"
+      type="video/mp4"
+      />
+      </video>
+    <button class="lord-icon" onclick="popUp()">
+      <lord-icon src="https://cdn.lordicon.com/pbbsmkso.json" trigger="click" colors="primary:black,secondary:black"></lord-icon>
+    </button>
+    <div class="popUp" id="myPopUp">
+      <a href="../html/gallery.html" id="gallery">Gallery</a>
+      <a href="../html/game.html" id="game">Game</a>
+      <a href="../html/form.html" id="form">Form</a>
+      <a href="../html/shop.html" id="shop">Shop</a>
+      <a href="../html/index.html" id="home">Home</a>
+      <button onclick="closePopUp()" id="cross">
+        &#x2715;
+    </div>
+  </button>
+    <header>
+      <img
+      src="../images/logo/medalion.png"
+      alt="medalionWitcher"
+      id="medalionWitcher"
+      />
+      <img
+      src="../images/logo/thewitcher.png"
+      alt="theWitcherLogo"
+      id="theWitcherLogo"
+      />
+      </header>
+    <main class="mainGallery">
+      <h1 id="galleryTitle">Gallery</h1>
+      <article  id="gallery-container">
+      </article>
+    </main>
+    <footer><p>&copy; Andrii Kyrychuk</p></footer>
+  </body>
+  <script src="../js/gallery.js"></script>
+  <script src="../js/script.js"></script>
+</html>

@@ -1,0 +1,345 @@
+@font-face {
+  font-family: TheWitcher;
+  src: url("../font/Thewitcher-jnOj.ttf");
+}
+@font-face {
+  font-family: Old-Me;
+  src: url("../font/Old-Me.otf")
+}
+@font-face {
+  font-family:Augusta;
+  src: url("../font/Augusta.ttf");
+}
+@font-face {
+  font-family:SaintCarell;
+  src: url("../font/SaintCarell_PERSONAL_USE_ONLY.otf");
+}
+
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+nav {
+  display: none;
+}
+body {display:none;}
+/* body {
+  display: grid;
+  grid-template-areas: "header header" "main main main" "footer footer footer";
+  background-color: rgb(0, 0, 0);
+  grid-template-columns: repeat(3, 1fr);
+} */
+  /* nav ul {
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+    display: none;
+  }
+
+  ul a {
+    color: black;
+    font-family: "nav";
+    text-decoration: none;
+  } */
+
+   /* grid-template-rows: repeat(3,1fr);      
+  min-height: 100vh;
+} 
+
+/*
+header {
+  grid-area: header;
+  background-color: brown;
+}
+nav {
+  grid-area: nav;
+  background-color: blueviolet;
+}
+#witcherLogo {
+  height: auto;
+  max-width: 100%;
+  filter: drop-shadow(1px 2px 13px #000000);
+}
+main {
+  grid-area: main;
+  background-color: aqua;
+  /* grid-template-rows: 50px / 50px; 
+}
+footer {
+  grid-area: footer;
+  background-color: chocolate;
+} 
+*/
+}
+
+@media only screen and (min-width: 250px) {
+  .bodyHomeMobile {
+    display:grid;
+    height: 100vh;
+    grid-template-areas: "header header header" "main main main" "footer footer footer";
+    grid-auto-rows: minmax(10vh, auto);
+  }
+
+  .bodyGalleryMobile {
+    display:grid;
+    height: 100vh;
+    grid-template-areas: "header header header" "main main main" "footer footer footer";
+    grid-auto-rows: 20% auto 10%;
+  }
+
+  #background {
+    position: fixed;
+    z-index: -999;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(0.5rem);
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-area: header;
+  }
+  
+
+  .lord-icon {
+    z-index: 3;
+    background-color: rgb(200, 5, 5);
+    border-radius: 100%;
+    position: fixed;
+    left: 5px;
+    bottom: 5px;
+    width: 4rem;
+    height: 4rem;
+    filter: drop-shadow(1px 2px 20px rgb(0, 0, 0));
+  }
+  
+  lord-icon {
+    height: 100%;
+    width: 100%;
+  }
+
+ .popUp {
+    width:100%;
+    height:100%;
+    display:none;
+    position:fixed;
+    background-color: rgb(200, 5, 5);
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    height: 100vh;
+    align-content: center;
+    z-index: 9999;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  
+  .popUp a {
+    display:none;
+    text-decoration: none;
+    text-shadow: 7px 5px 5px rgba(6, 6, 6, 0.6);
+    color: rgb(233, 231, 231);
+    font-size: 3rem;
+    font-family: Augusta;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.2s;
+  }
+
+  .popUp.open a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .popUp.close a {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  .popUp.open {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .popUp.close {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  @keyframes openPopup {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .popUp.close {
+    animation: closePopup 0.3s ease-in-out forwards;
+  }
+  
+  @keyframes closePopup {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+  }
+
+ #cross {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: -4px 4px 10px rgba(66, 68, 90, 1);
+    position: absolute;
+    bottom: 91.5vh;
+    left: 87vw;
+    background: none;
+    border:none;
+
+  }
+  
+  #medalionWitcher {
+    grid-area: 1/1/1/1;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    max-width: 8rem;
+    filter: drop-shadow(0px 0px 24px rgba(153, 38, 38, 1));
+
+  }
+
+  #theWitcherLogo {
+    grid-area: 1/2/1/2;
+    justify-self: center;
+    align-self: center;
+    height: auto;
+    max-width: 8.5rem;
+    filter: drop-shadow(0px 0px 13px #040404);
+  }
+
+  #backgroundMain {
+    width:100%;
+    height:100%;
+    opacity:0.7;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    content:"";
+    z-index: -1;
+    position: absolute;
+  }
+
+  #galleryContainer {
+    display: grid;
+    overflow-y: hidden;
+    height: 50vw;
+    max-height: 100vh;
+  }
+  
+  #gallery-container img {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .mainGallery {
+    background: none;
+    grid-area: main;
+    color:rgb(221, 219, 216);
+    font-family: SaintCarell;
+    justify-content: space-around;
+    display:grid;
+    }
+
+    .mainHome {
+      position:relative;
+      border: 5px solid rgb(210, 191, 191);
+      background: none;
+      border-radius: 0.5rem;
+      grid-area: main;
+      color:rgb(221, 219, 216);
+      font-family: Old-Me;
+      display:grid;
+    }
+  article {
+    display:grid;
+  }
+  figure {
+    display:grid;
+    row-gap: 1rem;
+  }
+
+  #mainTitle{
+    font-size: 1.2rem;
+    justify-self: center;
+    padding: 0.5em;
+    color:rgb(216, 215, 215);
+  }
+
+  #galleryTitle {
+  font-size: 2rem;
+  justify-self: center;
+  padding:1rem;
+  color:rgb(216, 215, 215);
+  }
+
+  .divFigure{
+  background-color: rgba(112, 11, 11, 0.476);
+  color:rgb(193, 188, 188);
+  text-align: center;
+  align-content: center;
+  width:90%;
+  padding:1rem;
+  justify-self: center;
+  }
+  
+  .imagesFigure{
+  width:100%;
+  padding: 1rem;
+  border-radius:2rem;
+  border-bottom:0.1rem solid rgb(255, 255, 255);
+  }
+
+  #figureText {
+    border:3px solid rgb(255, 255, 255);
+    padding:0.5rem;
+    margin:0.5rem;
+    border-radius:1rem;
+  }
+
+  footer {
+    display:grid;
+    border: 3px solid rgb(188, 25, 25);
+    border-radius: 0.5rem;
+    grid-area: footer;
+    color:rgb(198, 194, 184);
+    background: none;
+    font-family: TheWitcher;
+    font-weight: bold;
+    font-size: large;
+  }
+  footer p {
+    grid-area: 2/2/2/2;
+    
+  }
+}
